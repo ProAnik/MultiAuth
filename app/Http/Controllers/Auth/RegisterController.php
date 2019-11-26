@@ -112,8 +112,11 @@ class RegisterController extends Controller
      */
     protected function createFaculty(Request $request)
     {
+
+
+    
         $this->validator($request->all())->validate();
-        Blogger::create([
+        Faculty::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
